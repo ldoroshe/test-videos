@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="3.0">
+    <Ad id="TestAd">
+        <InLine>
+            <AdSystem version="1.0">TestAdServer</AdSystem>
+            <AdTitle>Test VPAID Ad</AdTitle>
+            <Description>Test ad that should fail playback</Description>
+            <Impression><![CDATA[https://example.com/impression]]></Impression>
+            <Creatives>
+                <Creative sequence="1">
+                    <Linear>
+                        <Duration>00:00:15</Duration>
+                        <MediaFiles>
+                            <!-- Legacy VPAID SWF that will likely fail -->
+                            <MediaFile delivery="progressive" type="application/x-shockwave-flash" apiFramework="VPAID" width="640" height="360">
+                                <![CDATA[https://example.com/vpaid_nonfunctioning.swf]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
